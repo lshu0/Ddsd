@@ -17,6 +17,7 @@ def main(date , date_1, date_1_long):
     a.format_id = 'sears'
     and isdispelig = 'true'
     and b.format_name = 'sears'
+    and b.stock_status <> 'OOS'
     and b.last_crawled_date between date(date_add('{yest_long}', -3, 'DAY')) and '{yest_long}'
     group by 1,2,3,4,5,6,7,8,9,11
     order by a.shc_item_id;
